@@ -1,11 +1,16 @@
+/* eslint-disable no-console */
 import React from 'react';
+import { Form } from './components/Form';
+import { Steps } from './components/Steps';
 
-import './App.scss';
-
-const App = () => (
-  <div className="App">
-    <h1>React Phone Catalog</h1>
-  </div>
-);
+const App = () => {
+  return (
+    <div className="app">
+      <h1 className="app__title">Your first project</h1>
+      <Steps />
+      <Form />
+    </div>
+  );
+};
 
 export default App;
