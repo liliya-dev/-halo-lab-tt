@@ -1,0 +1,83 @@
+.app__title {
+  letter-spacing: 0.1rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #fff;
+}
+
+.form__error {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #f15557;
+}
+.form__input::placeholder {
+  letter-spacing: 0.05rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #a7a7a7;
+}
+.form__label {
+  font-size: 14px;
+  line-height: 100%;
+  color: #636363;
+}
+.form__text-area::placeholder {
+  letter-spacing: 0.05rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  color: #a7a7a7;
+}
+.form__button {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+.file {
+  color: #333;
+}
+.file__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: right;
+  color: #a7a7a7;
+}
+
+.steps__item {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .app__title {
+    font-size: 25px;
+  }
+
+  .form__input::placeholder, .form__text-area::placeholder {
+    font-size: 12px;
+  }
+
+  .file__text, .file__label {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=typography.css.map */

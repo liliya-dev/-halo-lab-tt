@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+label,
+textarea,
+button {
+  cursor: pointer;
+}
+
+button {
+  transition: opacity 1s;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+body {
+  background: linear-gradient(228.75deg, #216190 19.65%, #0733cf 81.25%);
+  padding: 4vw 0 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.red {
+  color: #f15557;
+}
+
+/*# sourceMappingURL=General.css.map */
