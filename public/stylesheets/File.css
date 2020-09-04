@@ -1,0 +1,32 @@
+.file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.65px solid #ebe8e8;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 14px 24px;
+  margin-bottom: 20px;
+}
+.file__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.file__img {
+  width: 24px;
+  height: 20px;
+  margin-right: 16px;
+}
+.file__text {
+  margin: 0;
+}
+.file__label {
+  display: flex;
+  align-items: center;
+}
+
+/*# sourceMappingURL=File.css.map */

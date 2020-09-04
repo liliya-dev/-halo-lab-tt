@@ -11,11 +11,15 @@ interface Props {
   errorClass: string;
   error: string;
   removeError: (name: string) => (void);
+  handleInputChanges: (name: string, text: string) => (void);
+  value: string;
+  handleOnBlur: (name: string) => (void);
 }
 
 export const TextArea: React.FC<Props> = ({
   title, text, placeholder, inputClass, labelClass, optionClass,
-  isRequired, error, errorClass, removeError
+  isRequired, error, errorClass, removeError, handleInputChanges,
+  value, handleOnBlur,
 }) => {
   return (
     <div className={optionClass}>
@@ -26,11 +30,16 @@ export const TextArea: React.FC<Props> = ({
         }
       </label>
       <textarea
+        value={value}
         placeholder={placeholder}
         name={title}
         id={title}
         className={inputClass}
-        onChange={(event) => removeError(event.target.value)}
+        onChange={(event) => {
+          removeError(event.target.name);
+          handleInputChanges(title, event.target.value);
+        }}
+        onBlur={() => handleOnBlur(title)}
       />
       <p className={errorClass}>{error}</p>
     </div>

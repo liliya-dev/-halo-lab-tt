@@ -13,17 +13,17 @@ interface Props {
   error: string;
   errorClass: string;
   removeError: (name: string) => (void);
+  handleInputChanges: (name: string, text: string) => (void);
+  value: string;
+  handleOnBlur: (name: string) => (void);
 }
 
 export const FormInput: React.FC<Props> = ({
   title, text, placeholder, inputClass, type,
   labelClass, optionClass, isRequired, error,
-  errorClass, removeError,
+  errorClass, removeError, handleInputChanges,
+  value, handleOnBlur,
 }) => {
-  const handleOnBlur = (ev: any) => {
-    console.log(ev, removeError);
-  };
-
   return (
     <div className={optionClass}>
       <label htmlFor={title} className={labelClass}>
@@ -33,13 +33,17 @@ export const FormInput: React.FC<Props> = ({
         }
       </label>
       <input
+        value={value}
         type={type}
         placeholder={placeholder}
         name={title}
         id={title}
         className={inputClass}
-        onBlur={handleOnBlur}
-        onChange={(event) => removeError(event.target.name)}
+        onChange={(event) => {
+          removeError(event.target.name);
+          handleInputChanges(title, event.target.value);
+        }}
+        onBlur={() => handleOnBlur(title)}
       />
       <p className={errorClass}>
         {error}

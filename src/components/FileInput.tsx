@@ -1,16 +1,11 @@
-/* eslint-disable no-console */
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent } from 'react';
 
-export const FileInput = () => {
-  const [numberOfFiles, setNumberOfFiles] = useState(0);
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const increaseNumber = event.target.files?.length || 0;
+interface Props {
+  handleFiles: (event: ChangeEvent<HTMLInputElement>) => (void);
+  numberOfFiles: number;
+}
 
-    console.log(event.target.files);
-
-    setNumberOfFiles(numberOfFiles + increaseNumber);
-  };
-
+export const FileInput: React.FC<Props> = ({ handleFiles, numberOfFiles }) => {
   return (
     <div className="form__file file">
 
@@ -23,7 +18,7 @@ export const FileInput = () => {
           id="file"
           name="file"
           multiple
-          onChange={handleChange}
+          onChange={handleFiles}
         />
       </label>
       <p className="file__text">
