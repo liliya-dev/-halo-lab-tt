@@ -1,4 +1,6 @@
 import React, { ChangeEvent } from 'react';
+import styles from './styles.module.scss';
+import folder from './Folder.png';
 
 interface Props {
   handleFiles: (event: ChangeEvent<HTMLInputElement>) => (void);
@@ -7,21 +9,21 @@ interface Props {
 
 export const FileInput: React.FC<Props> = ({ handleFiles, numberOfFiles }) => {
   return (
-    <div className="form__file file">
+    <div className={styles.file}>
 
-      <label htmlFor="file" className="file__label">
-        <img src="img/Folder.png" alt="add folder" className="file__img" />
+      <label htmlFor="file" className={styles.label}>
+        <img src={folder} alt="add folder" className={styles.img} />
         Add file as attachment
         <input
           type="file"
-          className="file__input"
+          className={styles.input}
           id="file"
           name="file"
           multiple
           onChange={handleFiles}
         />
       </label>
-      <p className="file__text">
+      <p className={styles.text}>
         {
           numberOfFiles === 0
             ? 'Choose a file'

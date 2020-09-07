@@ -1,12 +1,13 @@
 /* eslint-disable no-console */
 import React, { useState, ChangeEvent } from 'react';
-import { zeroStateValues, zeroStateErrors } from '../constants';
-import { showErrors } from '../helpers';
-import { ObjectIndex } from '../interfaces';
-import { FileInput } from './FileInput';
-import { FormInput } from './FormInput';
-import { SubmitButton } from './SubmitButton';
-import { TextArea } from './TextArea';
+import { zeroStateValues, zeroStateErrors } from './constants';
+import { showErrors } from './helpers';
+import { ObjectIndex } from '../../interfaces/interfaces';
+import { FileInput } from './components/FileInput';
+import { FormInput } from './components/FormInput/index';
+import { SubmitButton } from '../Buttons/SubmitButton';
+import { TextArea } from './components/TextArea';
+import styles from './styles.module.scss';
 
 export const Form = () => {
   const [values, setValues] = useState(zeroStateValues);
@@ -52,35 +53,31 @@ export const Form = () => {
   };
 
   return (
-    <form className="form">
-      <div className="form__wrapper">
+    <form className={styles.container}>
+      <div className={styles.wrapper}>
         <FormInput
+          additionalClass="optionBig"
+          isError={errors.company.length !== 0}
           title="company"
-          inputClass="form__input"
-          labelClass="form__label"
           text="Your company name"
           placeholder="Type text"
           type="text"
-          optionClass="form__option form__option--company"
           isRequired={false}
           error=""
-          errorClass="form__error"
           removeError={removeError}
           handleInputChanges={handleInputChanges}
           value={values.company}
           handleOnBlur={handleOnBlur}
         />
         <FormInput
+          additionalClass="optionSmall"
+          isError={errors.number.length !== 0}
           title="number"
-          inputClass={errors.number === '' ? 'form__input' : 'form__input form__input--invalid'}
-          labelClass="form__label"
           text="Number of people "
           placeholder="1-99"
           type="text"
-          optionClass="form__option form__option--people"
           isRequired
           error={errors.number}
-          errorClass="form__error"
           removeError={removeError}
           handleInputChanges={handleInputChanges}
           value={values.number}
@@ -88,16 +85,14 @@ export const Form = () => {
         />
       </div>
       <FormInput
+        additionalClass=""
+        isError={errors.business.length !== 0}
         title="business"
-        inputClass={errors.business === '' ? 'form__input' : 'form__input form__input--invalid'}
-        labelClass="form__label"
         text="Business area"
         placeholder="Design, Marketing, Development, etc."
         type="text"
-        optionClass="form__option"
         isRequired
         error={errors.business}
-        errorClass="form__error"
         removeError={removeError}
         handleInputChanges={handleInputChanges}
         value={values.business}
@@ -105,14 +100,11 @@ export const Form = () => {
       />
       <TextArea
         title="description"
-        inputClass={errors.description === '' ? 'form__text-area' : 'form__text-area form__text-area--invalid'}
-        labelClass="form__label"
         text="Description"
+        isError={errors.description.length !== 0}
         placeholder="Type text"
-        optionClass="form__option"
         isRequired
         error={errors.description}
-        errorClass="form__error"
         removeError={removeError}
         handleInputChanges={handleInputChanges}
         value={values.description}
@@ -121,7 +113,6 @@ export const Form = () => {
       <FileInput handleFiles={handleFiles} numberOfFiles={numberOfFiles} />
       <SubmitButton
         text="Submit"
-        buttonClass="form__button"
         handleSubmit={handleSubmit}
       />
     </form>

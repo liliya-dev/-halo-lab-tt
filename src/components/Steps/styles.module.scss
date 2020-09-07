@@ -1,0 +1,45 @@
+@import '../../generalStyles/vars.scss';
+@import '../../generalStyles/General.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 610px;
+  max-width: 95%;
+  padding: 0 4% 4% 4%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 64px;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.nonActive {
+  background-color: $main-color;
+}
+
+.active {
+  background-color: $highlighted-color;
+}
+
+.line {
+  width: 29%;
+  height: 2px;
+  background: $input-border-color;
+  opacity: 0.2;
+  border-radius: 8px;
+}

@@ -1,16 +1,16 @@
 import React from 'react';
+import styles from './styles.module.scss';
 
 interface Props {
-  buttonClass: string;
   text: string;
   handleSubmit: (event: React.FormEvent) => (void);
 }
 
-export const SubmitButton: React.FC<Props> = ({ buttonClass, text, handleSubmit }) => {
+export const SubmitButton: React.FC<Props> = ({ text, handleSubmit }) => {
   return (
     <button
       type="submit"
-      className={buttonClass}
+      className={styles.button}
       onClick={(event) => handleSubmit(event)}
     >
       {text}

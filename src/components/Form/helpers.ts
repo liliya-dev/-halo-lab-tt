@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import { ObjectIndex, Values } from './interfaces';
+import { ObjectIndex, Values } from '../../interfaces/interfaces';
 
 export const showErrors = (name: string, errors: ObjectIndex, values: Values) => {
   let errorsList: ObjectIndex = { ...errors };

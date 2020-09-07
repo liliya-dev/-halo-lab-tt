@@ -1,0 +1,28 @@
+@import './generalStyles/vars.scss';
+@import './generalStyles/General.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  letter-spacing: .1rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: $title-text-color;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 25px;
+  }
+}

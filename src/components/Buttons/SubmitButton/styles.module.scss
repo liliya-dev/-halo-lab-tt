@@ -1,0 +1,18 @@
+@import '../../../generalStyles/General.scss';
+@import '../../../generalStyles/vars.scss';
+
+button {
+  width: 144px;
+  height: 56px;
+
+  background: $highlighted-color;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: $title-text-color;
+}

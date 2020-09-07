@@ -1,0 +1,35 @@
+@import '../../generalStyles/vars.scss';
+@import '../../generalStyles/General.scss';
+
+.container {
+  width: 610px;
+  max-width: 95%;
+  padding: 4.5%;
+
+  background-color: $title-text-color;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+  .form {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__option {
+
+      &--company {
+        width: 100%;
+      }
+
+      &--people {
+        width: 100%;
+      }
+    }
+  }
+}
