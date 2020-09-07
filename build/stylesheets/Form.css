@@ -4,6 +4,7 @@
   padding: 4.5%;
   background-color: #fff;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 .form__error {
   display: flex;
@@ -42,6 +43,7 @@
 .form__input::placeholder {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .form__label {
   display: flex;
@@ -63,6 +65,7 @@
 .form__text-area::placeholder {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .form__button {
   width: 144px;

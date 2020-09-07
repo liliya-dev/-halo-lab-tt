@@ -4,6 +4,7 @@
   padding: 4.5%;
   background-color: #fff;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 .form__error {
   display: flex;
@@ -42,6 +43,7 @@
 .form__input::placeholder {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .form__label {
   display: flex;
@@ -63,6 +65,7 @@
 .form__text-area::placeholder {
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .form__button {
   width: 144px;
@@ -101,7 +104,6 @@
   color: #f15557;
 }
 .form__input::placeholder {
-  letter-spacing: 0.05rem;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -202,7 +204,7 @@
   align-items: center;
   width: 610px;
   max-width: 95%;
-  padding: 4.5%;
+  padding: 0 4% 4% 4%;
 }
 .steps__item {
   display: flex;
@@ -246,7 +248,7 @@ button:hover {
 
 body {
   background: linear-gradient(228.75deg, #216190 19.65%, #0733cf 81.25%);
-  padding: 4vw 0 0;
+  padding: 60px 0 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
@@ -263,7 +265,7 @@ body {
   width: 100%;
 }
 .app__title {
-  margin-bottom: 7vw;
+  margin-bottom: 20px;
   margin-top: 0;
 }
 
